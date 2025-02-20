@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 15px;
+    background: #5145BA;
+}
+
+
+.config-container, .quiz-conainer{
+    width: 415px;
+    text-align: center;
+    padding: 25px;
+    display: block;
+}
+
+:where(.config-container, .quizz-container, .result-container){
+    display: none;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+}
+
+
+
+.config-container .config-title{
+    font-size: 1.31rem;
+}
+
+.config-container .config-option{
+    margin-top: 25px;
+}
+
+.config-option .option-title{
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 1.125rem;
+} 
+
+.config-option .category-options{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.config-option .question-options{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 30px;
+    flex-wrap: wrap;
+}
+
+.config-option button{
+    padding: 12px;
+    font-size: 0.938rem;
+    font-weight: 500;
+    background-color: #fff;
+    border: 1px solid #9B8fff;
+    border-radius: 6px;
+    cursor: pointer;
+    
+}
+
+.config-option button:hover{
+    background: #dad5fd;
+}
+
+.question-options button
+{
+    flex: 1 1 10%;
+}
+
+.config-option button.active {
+    color: #5145BA;
+    background-color: #5145BA;
+    background: #dfd5fd;
+}
+
+.config-container .start-quizz-button{
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+    background: #5145BA;
+    padding: 13px 25px;
+    font-size: 1rem;
+    border-radius: 6px;
+    /* transition: background 0.3s ease; */
+}
+
+.config-container .start-quizz-button:hover,
+.quizz-footer .next-btn:hover,
+.result-container .again-btn:hover{
+    background: #403795;
+}
+
+
+.quizz-container{
+    background-color: #fff;
+    width: 400px;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.quizz-header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #c6c6c6;
+    padding: 10px;
+    width: 100%;
+    font-weight: 600;
+}
+
+.quiz-time{
+    display: flex;
+    justify-content: space-between;
+    background-color: #32313c;
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.quizz-content{
+    margin-top: 15px;
+}
+
+.quizz-option{
+    border: 2px solid #9B8fff;
+    background-color: rgba(218, 213, 253, 0.2);
+    text-decoration: none;
+    margin-top: 9px;
+    border-radius: 5px;
+    padding: 9px 15px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quizz-option:hover{
+    background-color: rgba(155, 143, 255, 0.7);
+}
+
+.quizz-footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    align-items: center;
+    border-top: 1px solid #c6c6c6;
+    padding: 10px;
+}
+
+.next-btn, .again-btn{
+    padding: 9px;
+    background-color: #5145BA;
+    color: #fff;
+    border-radius: 9px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.next-btn{
+    visibility: hidden;
+}
+
+.quizz-container .quizz-option.correct{
+    background-color: #B7E1C1;
+    background: #D4EDDA;
+    color: #155724;
+}
+
+.quizz-container .quizz-option.incorrect{
+    background-color: #F4BEC3;
+    background: #F8D7DA;
+    color: #721C24;
+}
+
+.result-container{
+    justify-items: center;
+    padding: 40px;
+    width: 412px;
+}
+
+.result-container img{
+    width: 150px;
+}
+
+.result-container .result-heading{
+    margin-top: 19px;
+    font-size: 1.2rem;
+}
+
+.result-container .quizz-description{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.result-container .again-btn{
+    margin-top: 20px;
+}
